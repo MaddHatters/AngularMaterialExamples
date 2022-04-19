@@ -1,0 +1,17 @@
+.center {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__item {
+    margin-left: 10px;;
+}

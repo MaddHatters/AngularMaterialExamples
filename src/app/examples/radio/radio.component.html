@@ -1,0 +1,119 @@
+<!-- <div class="section">
+    <form #noGroupForm="ngForm">
+        <label id="example-radio-group-label">Form without Group</label>
+        <div class="example-radio-group">
+            <mat-radio-button
+                class="example-radio-button"
+                *ngFor="let season of seasonsNoGroup"
+                [value]="season"
+                name="season"
+                [(ngModel)]="favoriteSeasonNoGroup">
+                {{season}}
+            </mat-radio-button>
+            <div>Your favorite season is: {{favoriteSeasonNoGroup}}</div>
+        </div>
+    </form>
+    <div class="form-label">Form Valid: {{noGroupForm.valid}}</div>
+    <div *ngIf="noGroupForm.invalid" class="form-row form__item-spacing alert alert-danger">
+        {{noGroupForm.errors | json}}
+        <div class="form-row" *ngIf="noGroupForm.errors?.['required']">
+            <div class="form-label">required</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">{{noGroupForm.errors?.['required'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="noGroupForm.errors?.['maDateInputParse']">
+            <div class="form-label">maDateInputParse</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputParse {{noGroupForm.errors?.['maDateInputParse'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="noGroupForm.errors?.['maDateInputMin']">
+            <div class="form-label">maDateInputMin</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputMin {{noGroupForm.errors?.['maDateInputMin'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="noGroupForm.errors?.['maDateInputMax']">
+            <div class="form-label">maDateInputMax</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputMax {{noGroupForm.errors?.['maDateInputMax'] | json}}</div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="section">
+    <label id="example-radio-group-label">Standalone radio group</label>
+    <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="favoriteSeasonNoForm">
+
+        <mat-radio-button
+            class="example-radio-button"
+            *ngFor="let season of seasonsNoForm"
+            [value]="season">
+            {{season}}
+        </mat-radio-button>
+
+    </mat-radio-group>
+    <div>Your favorite season is: {{favoriteSeasonNoForm}}</div>
+</div>
+
+<div class="section">
+    <form #groupForm="ngForm">
+
+        <label id="example-radio-group-label">Form with Group</label>
+        <mat-radio-group
+            name="season"
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            [(ngModel)]="favoriteSeason">
+
+            <mat-radio-button
+                class="example-radio-button"
+                *ngFor="let season of seasons"
+                [value]="season">
+                {{season}}
+            </mat-radio-button>
+
+        </mat-radio-group>
+        <div>Your favorite season is: {{favoriteSeason}}</div>
+
+    </form>
+    <div class="form-label">Form Valid: {{groupForm.valid}}</div>
+    <div *ngIf="groupForm.invalid" class="form-row form__item-spacing alert alert-danger">
+        {{groupForm.errors | json}}
+        <div class="form-row" *ngIf="groupForm.errors?.['required']">
+            <div class="form-label">required</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">{{groupForm.errors?.['required'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="groupForm.errors?.['maDateInputParse']">
+            <div class="form-label">maDateInputParse</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputParse {{groupForm.errors?.['maDateInputParse'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="groupForm.errors?.['maDateInputMin']">
+            <div class="form-label">maDateInputMin</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputMin {{groupForm.errors?.['maDateInputMin'] | json}}</div>
+            </div>
+        </div>
+
+        <div class="form-row" *ngIf="groupForm.errors?.['maDateInputMax']">
+            <div class="form-label">maDateInputMax</div>
+            <div class="form-controls">
+                <div class="form__item-spacing text--invalid">maDateInputMax {{groupForm.errors?.['maDateInputMax'] | json}}</div>
+            </div>
+        </div>
+    </div>
+</div>

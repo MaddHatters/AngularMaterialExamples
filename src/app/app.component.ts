@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { DateFnsAdapter, MAT_DATE_FNS_FORMATS } from '@angular/material-date-fns-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { enUS } from 'date-fns/locale';
@@ -15,13 +16,7 @@ import { enUS } from 'date-fns/locale';
   ]
 })
 export class AppComponent {
-  @ViewChild('picker')
-  public datepicker: any;
-
-
-  title = 'angular-material-examples';
-
   constructor() {
-    // this.datepicker.setLocale(enUS)
   }
 }
+
